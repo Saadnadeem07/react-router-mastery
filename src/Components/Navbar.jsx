@@ -4,14 +4,7 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
   return (
     <>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "space-between",
-          gap: "400px",
-          backgroundColor: "white",
-        }}
-      >
+      <div className="flex justify-between gap-[100px] bg-white">
         <h2>
           <Link to={"/"}>Home</Link>
         </h2>

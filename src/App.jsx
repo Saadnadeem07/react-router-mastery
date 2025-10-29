@@ -5,6 +5,7 @@ import About from "./Pages/About";
 import Contact from "./Pages/Contact";
 import NotFound from "./Pages/NotFound";
 import Navbar from "./Components/Navbar";
+//30 minutes done
 const App = () => {
   return (
     <>
