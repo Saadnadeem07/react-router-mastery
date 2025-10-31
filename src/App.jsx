@@ -5,8 +5,16 @@ import About from "./Pages/About";
 import Contact from "./Pages/Contact";
 import NotFound from "./Pages/NotFound";
 import Navbar from "./Components/Navbar";
+import Navbar2 from "./Components/Navbar2";
 import User from "./Pages/User";
 import DynamicUser from "./Pages/DynamicUser";
+//nested routing imports
+import Dashboard from "./Nested-Routing/Dashboard";
+import Laptops from "./Nested-Routing/Laptops";
+import Mobiles from "./Nested-Routing/Mobiles";
+import Products from "./Nested-Routing/Products";
+import LaptopChild from "./Nested-Routing/LaptopChild";
+import L2 from "./Nested-Routing/L2";
 
 // Main App Component
 // This component defines all routes of the application using React Router
@@ -14,24 +22,22 @@ const App = () => {
   return (
     <>
       <Router>
-        {/* Navbar appears on every page */}
         <Navbar />
-
-        {/* Routes handle which component to render for each URL */}
         <Routes>
-          {/* Static routes */}
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
-
-          {/* Route showing a list of users */}
           <Route path="/user" element={<User />} />
-
-          {/* Dynamic route: shows details for a specific user (based on id) */}
           <Route path="/user/:id" element={<DynamicUser />} />
-
-          {/* Wildcard route: handles all undefined URLs */}
           <Route path="*" element={<NotFound />} />
+          <Route path="/dashboard" element={<Dashboard />}>
+            <Route index element={<Mobiles />} />
+            <Route path="product" element={<Products />} />
+            <Route path="laptop" element={<Laptops />}>
+              <Route index element={<LaptopChild />} />
+              <Route path="laptop-child" element={<L2 />} />
+            </Route>
+          </Route>
         </Routes>
       </Router>
     </>

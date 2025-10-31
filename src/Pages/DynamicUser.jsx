@@ -31,17 +31,19 @@ const DynamicUser = () => {
 
   return (
     <>
-      <h2>Name: {specificUser.name}</h2>
-      <h2>Email: {specificUser.email}</h2>
-      <div className="flex gap-4">
-        <button onClick={() => navigate("/")}>Return Home</button>
-        <button onClick={() => navigate("/contact")}>
-          Return to Contact Us
-        </button>
-        {/* dont use Link here  */}
-        {/* <button>
+      <div className="bg-[#1a1a1a] mt-4 p-4 ">
+        <h2>Name: {specificUser.name}</h2>
+        <h2>Email: {specificUser.email}</h2>
+        <div className="flex gap-4">
+          <button onClick={() => navigate("/")}>Return Home</button>
+          <button onClick={() => navigate("/contact")}>
+            Return to Contact Us
+          </button>
+          {/* dont use Link here  */}
+          {/* <button>
           <Link to={"/contact"}>Contact Us</Link>
         </button> */}
+        </div>
       </div>
     </>
   );

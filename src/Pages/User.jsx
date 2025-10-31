@@ -13,17 +13,19 @@ const User = () => {
 
   return (
     <>
-      <h2>All Users</h2>
+      <div className="bg-[#1a1a1a] mt-4 p-4 ">
+        <h2>All Users</h2>
 
-      {/* Loop through each user and display their name as a clickable link */}
-      {users.map((x) => (
-        <div key={x.id}>
-          {/* Link navigates to /user/{id} (dynamic route) */}
-          <Link to={`/user/${x.id}`}>
-            <h4>{x.name}</h4>
-          </Link>
-        </div>
-      ))}
+        {/* Loop through each user and display their name as a clickable link */}
+        {users.map((x) => (
+          <div key={x.id}>
+            {/* Link navigates to /user/{id} (dynamic route) */}
+            <Link to={`/user/${x.id}`}>
+              <h4>{x.name}</h4>
+            </Link>
+          </div>
+        ))}
+      </div>
     </>
   );
 };
