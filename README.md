@@ -1,3 +1,4 @@
+[![React](https://img.shields.io/badge/React-19.2.0-blue?logo=react)](https://react.dev)
 # ⚛️ React Router Mastery
 
 Welcome to **React Router Mastery** — a complete learning project that explores everything from **React Router v6 basics** to **React Router v7 data APIs**, including loaders, actions, and nested routes.
